@@ -1,0 +1,16 @@
+[build]
+  publish = "public"
+[functions]
+  directory = "netlify/functions"
+[[redirects]]
+  from = "/workspace"
+  to = "/app"
+  status = 302
+[[redirects]]
+  from = "/app"
+  to = "/app.html"
+  status = 200
+[[headers]]
+  for = "/service-worker.js"
+  [headers.values]
+    Cache-Control = "no-cache"
